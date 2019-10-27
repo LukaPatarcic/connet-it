@@ -1,0 +1,79 @@
+O.Š. Sečenji Ištvan
+O.Š. Sonja Marinković
+O.Š. Ivan Milutinović
+O.Š. Matko Vuković
+O.Š. Đuro Salaj
+O.Š. Ivan Goran Kovačić
+O.Š. Jovan Jovanović Zmaj
+O.Š. Kizur Ištvan
+O.Š. Jovan Mikić
+O.Š. 10. Oktobar
+O.Š. Miloš Crnjanski
+O.Š. Majšanski put
+O.Š. Sveti Sava
+O.Š. Miroslav Antić
+O.Š. Petefi Šandor
+O.Š. Bosa Milićević
+O.Š. Pionir
+O.Š. Matija Gubec
+O.Š. Hunjadi Janoš
+O.Š. Vuk Karadžić
+O.Š. Vladimir Nazor
+O.Š. Žarko Zrenjanin
+O.Š. Muzička škola
+Žarko Zrenjanin
+Muzička škola
+Ekonomska škola Global
+Ekonomsko škola Bosa Milicevic
+Gimnazija Svetozar Markovic
+Hemijsko tehnoloska škola Lazar Nesic
+Medicinska škola
+Politehnička škola
+Tehnička škola Ivan Sarić
+Ekonomski fakultet
+Građevinski fakultet
+Visoka tehnička škola strukovnih studija
+Visoka škola strukovnih studija za obrazovanje vaspitača
+Gimnazija za talentovane učenike Kostolanji Dežo
+
+INSERT INTO `school` (`id`, `name`) VALUES
+(1, 'O.Š. Sečenji Ištvan '),
+(2, 'O.Š. Sonja Marinković'),
+(3, 'O.Š. Ivan Milutinović'),
+(4, 'O.Š. Matko Vuković'),
+(5, 'O.Š. Đuro Salaj'),
+(6, 'O.Š. Ivan Goran Kovačić'),
+(7, 'O.Š. Jovan Jovanović Zmaj'),
+(8, 'O.Š. Kizur Ištvan'),
+(9, 'O.Š. Jovan Mikić'),
+(10, 'O.Š. 10. Oktobar'),
+(11, 'O.Š. Miloš Crnjanski'),
+(12, 'O.Š. Majšanski put'),
+(13, 'O.Š. Sveti Sava'),
+(14, 'O.Š. Miroslav Antić'),
+(15, 'O.Š. Petefi Šandor'),
+(16, 'O.Š. Bosa Milićević'),
+(17, 'O.Š. Pionir'),
+(18, 'O.Š. Matija Gubec'),
+(19, 'O.Š. Hunjadi Janoš'),
+(20, 'O.Š. Vuk Karadžić'),
+(21, 'O.Š. Vladimir Nazor'),
+(22, 'O.Š. Žarko Zrenjanin'),
+(23, 'O.Š. Muzička škola'),
+(24, 'Žarko Zrenjanin'),
+(25, 'Muzička škola'),
+(26, 'Ekonomska škola Global '),
+(27, 'Ekonomsko škola Bosa Milicevic'),
+(28, 'Gimnazija Svetozar Markovic '),
+(29, 'Hemijsko tehnoloska škola Lazar Nesic '),
+(30, 'Medicinska škola'),
+(31, 'Politehnička škola'),
+(32, 'Tehnička škola Ivan Sarić'),
+(33, 'Ekonomski fakultet'),
+(34, 'Građevinski fakultet'),
+(35, 'Visoka tehnička škola strukovnih studija'),
+(36, 'Visoka škola strukovnih studija za obrazovanje \nvaspitača\n'),
+(37, 'Gimnazija za talentovane učenike Kostolanji Dežo');
+
+
+Jos neke dve koje fale, fale i tu. :D

@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Registracija{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col s12 " style="height: 18vh"></div>
+    <div class="col s12 m4 offset-m6">
+        <div class="card white darken-1 z-depth-5">
+            <div class="card-content grey-text">
+                <span class="card-title center-align" style="font-size: 30px; font-weight: bold">Registration</span>
+                <div class="row">
+                    {{ form_start(registrationForm,{ 'attr': {'autocomplete': 'off'} }) }}
+                    <div class="input-field col s6">
+                        {{ form_row(registrationForm.firstName) }}
+                    </div>
+                    <div class="input-field col s6">
+                        {{ form_row(registrationForm.lastName) }}
+                    </div>
+                    <div class="input-field col s6">
+                        {{ form_row(registrationForm.email) }}
+                    </div>
+                    <div class="input-field col s6">
+                        {{ form_row(registrationForm.nickname) }}
+                    </div>
+                    <div class="input-field col s12">
+                        {{ form_row(registrationForm.school) }}
+                    </div>
+                    <img id="robot-img" class="circle responsive-img center-block blue-grey" style="margin-bottom: 10px">
+                    <button class="btn waves-effect waves-light" type="submit" name="action" style="width: 100%;">
+                        <span style="font-weight: bold; padding-top: -9px">Register</span>
+                    </button>
+                    {{ form_end(registrationForm) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('select');
+        var instances = M.FormSelect.init(elems);
+    });
+    var email = document.getElementById('user_email');
+    var picture = document.getElementById('robot-img');
+    email.addEventListener('change',function () {
+        picture.src = `https://robohash.org/${email.value}?size=200x200`
+    })
+</script>
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Igra{% endblock %}
+
+{% block body %}
+    <div class="row d-none" id="timer">
+        <div class="col s12 " style="height: 6vh"></div>
+        <div class="col s12 m2 offset-m5">
+            <div class="card white darken-1 z-depth-5" style="padding: 0px">
+                <div class="card-content grey-text" style="padding: 0px">
+                    <div class="row center-align">
+                        <span class="timer" style="font-size: 50px"><time>00:00:00</time></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="intro">
+        <div class="col s12 " style="height: 10vh"></div>
+        <div class="col s12 m4 offset-m4">
+            <div class="card white darken-1 z-depth-5">
+                <div class="card-content grey-text">
+                    <span class="card-title center-align" style="font-size: 40px; font-weight: bold; margin-bottom: 10px">CONNECT IT</span>
+                    <div class="row" style="font-size: 25px">
+                        <div class="col s12">
+                            <p style="text-align: justify">
+                                Connect the pictures to the question. You will get 10 questions, each question is worth 10 points for a total of 100 points. You will also be timed. Careful there might be more than one correct answer.<p style="text-align: center">Good luck and have fun!</p>
+                            </p>
+                            <div  class="center-align" style="margin-top: 25px">
+                                <a class="waves-effect waves-light btn-large" id="start" style="font-weight: bold">Start</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        {% for question in questions %}
+    <div class="row question d-none" data-id="{{ question.id }}">
+        <div class="col s12 m6 offset-m3">
+            <div class="card white darken-1 z-depth-5">
+                <div class="card-content grey-text">
+                    <div class="row">
+                        <img class="responsive-img center-block droppable" width="300" height="300" src="/questions/{{ question.id }}/pitanje.jpg">
+                    </div>
+                    <div class="row" style="font-size: 25px">
+                        {% set letter = ['A','B','C','D'] %}
+                        {% set num = 0 %}
+                        {% for choice in question.questionChoices %}
+                            <div class="col s3">
+                                <p class="center-align">{{ letter[num] }}</p>
+                                <img class="responsive-img center-block img{{ num + 1 }}" src="{{ choice.choice }}" data-id="{{ choice.id }}">
+                            </div>
+                            {% set num = num + 1 %}
+                        {% endfor %}
+                        <div class="col s12 center-align" style="margin-top: 20px">
+                            <a href="#" class="btn-floating btn-large waves-effect waves-light blue-grey darken-4 next"><i class="material-icons large">chevron_right</i></a>
+                            <span style="float: right;"><span class="numberCounter">1</span>/10</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        {% endfor %}
+    <div class="row d-none finish" style="font-size: 25px">
+        <div class="col s12" style="height: 10vh"></div>
+        <div class="col s12 m4 offset-m4">
+            <div class="card white darken-1 z-depth-5">
+                <div class="card-content grey-text">
+                    <span class="card-title center-align" style="font-size: 30px; font-weight: bold; margin-bottom: 10px">END</span>
+                    <div class="row" style="font-size: 25px">
+                        <div class="col s12">
+                            <p>Total points: <span id="points"></span></p>
+                            <p>Total time: <span id="time"></span></p>
+                            <div class="center-align" style="margin-top: 20px">
+                                <a href="{{ path('app_logout') }}" class="btn btn-large waves-effect waves-light blue-grey darken-4">Finish</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+   {% block javascripts %}
+  {{ parent() }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+</script>
+
+{% endblock %}

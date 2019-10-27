@@ -1,0 +1,23 @@
+{
+    "devDependencies": {
+        "@symfony/webpack-encore": "^0.28.0",
+        "core-js": "^3.0.0",
+        "regenerator-runtime": "^0.13.2",
+        "webpack-notifier": "^1.6.0"
+    },
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "dev-server": "encore dev-server",
+        "dev": "encore dev",
+        "watch": "encore dev --watch",
+        "build": "encore production --progress"
+    },
+    "dependencies": {
+        "@shopify/draggable": "^1.0.0-beta.8",
+        "draggable": "^4.2.0",
+        "jquery": "^3.4.1",
+        "jquery-ui": "^1.12.1",
+        "timer": "^0.0.2"
+    }
+}

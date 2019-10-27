@@ -1,0 +1,23 @@
+Koristnik:
+email
+ime
+prezime
+slika: https://robohash.org/ime+prezime
+broj poena (svaki tacan odgovor +100 poena, netacan -100)
+
+Kviz:
+Pitanje
+4 ponudjena odgovora
+Neki od tih su tacni neki su netacni (kako to uraditi)
+Izvlaci se 10 pitanja
+U sklopu tih 10 pitanja, maksimalan broj poena je 1500
+
+---------------------------------------------------------
+
+Pocetna stranica :
+Igraj igru -> ime/prezime/email -> ulazi u igru
+Kad zavrsi igru, vraca se na Igraj igru
+
+Stranica high score :
+
+Se refreshuje 
