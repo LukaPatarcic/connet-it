@@ -30,6 +30,12 @@ php bin/console doctrine:database:create
 php bin/console doctrine:migrations:migrate
 ```
 
+Setup frontend
+```
+npm install
+yarn encore dev
+```
+
 Finally run dev server
 ```
 php bin/console s:r
