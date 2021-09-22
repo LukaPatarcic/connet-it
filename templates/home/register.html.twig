@@ -17,15 +17,15 @@
                     <div class="input-field col s6">
                         {{ form_row(registrationForm.lastName) }}
                     </div>
-                    <div class="input-field col s6">
+                    {# <div class="input-field col s6">
                         {{ form_row(registrationForm.email) }}
-                    </div>
-                    <div class="input-field col s6">
+                    </div> #}
+                    <div class="input-field col s12">
                         {{ form_row(registrationForm.nickname) }}
                     </div>
-                    <div class="input-field col s12">
+                    {# <div class="input-field col s12">
                         {{ form_row(registrationForm.school) }}
-                    </div>
+                    </div> #}
                     <img id="robot-img" class="circle responsive-img center-block blue-grey" style="margin-bottom: 10px">
                     <button class="btn waves-effect waves-light" type="submit" name="action" style="width: 100%;">
                         <span style="font-weight: bold; padding-top: -9px">Register</span>
@@ -42,7 +42,7 @@
         var elems = document.querySelectorAll('select');
         var instances = M.FormSelect.init(elems);
     });
-    var email = document.getElementById('user_email');
+    var email = document.getElementById('user_nickname');
     var picture = document.getElementById('robot-img');
     email.addEventListener('change',function () {
         picture.src = `https://robohash.org/${email.value}?size=200x200`

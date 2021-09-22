@@ -41,20 +41,20 @@ class UserType extends AbstractType
                     ])
                 ]
             ])
-            ->add('email', EmailType::class, [
-                'label' => 'Email',
-                'attr' => [
-                    'autocomplete' => 'off'
-                ],
-                'constraints' => [
-                    new NotBlank([
-                        'message' => 'PLease fill out this field',
-                    ]),
-                    new Email([
-                        'message' => 'Email address is not valid'
-                    ])
-                ]
-            ])
+            // ->add('email', EmailType::class, [
+            //     'label' => 'Email',
+            //     'attr' => [
+            //         'autocomplete' => 'off'
+            //     ],
+            //     'constraints' => [
+            //         new NotBlank([
+            //             'message' => 'PLease fill out this field',
+            //         ]),
+            //         new Email([
+            //             'message' => 'Email address is not valid'
+            //         ])
+            //     ]
+            // ])
             ->add('nickname', TextType::class,[
                 'label' => 'Nickname',
                 'attr' => [
@@ -65,14 +65,14 @@ class UserType extends AbstractType
                 ]),
 
             ])
-            ->add('school', EntityType::class,[
-                'placeholder' => 'Choose your school',
-                'label' => 'School',
-                'class' => School::class,
-                'constraints' => new NotBlank([
-                    'message' => 'PLease fill out this field',
-                ]),
-            ])
+            // ->add('school', EntityType::class,[
+            //     'placeholder' => 'Choose your school',
+            //     'label' => 'School',
+            //     'class' => School::class,
+            //     'constraints' => new NotBlank([
+            //         'message' => 'PLease fill out this field',
+            //     ]),
+            // ])
         ;
     }
 

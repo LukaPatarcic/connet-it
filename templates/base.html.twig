@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        {{ encore_entry_link_tags('app') }}
-        {% block stylesheets %}{% endblock %}
-    </head>
-    {% if app.request.pathinfo == '/' %}
-        <body style="background: url('{{ asset('build/images/rocket-ship-bg.svg') }}') fixed; background-size: 100vw 100vh">
-    {% elseif app.request.pathinfo == '/game' %}
-        <body style="background: url('{{ asset('build/images/space-bg.svg') }}') no-repeat fixed; background-size: 100vw 100vh">
-    {% elseif app.request.pathinfo == '/result' %}
-        <body style="background: url('{{ asset('build/images/space-spaceman-bg.svg') }}') fixed; background-size: 100vw 100vh">
-    {% else %}
-        <body style="background: url('{{ asset('build/images/space-bg.svg') }}') no-repeat fixed; background-size: 100vw 100vh">
-    {% endif %}
-        {% block body %}{% endblock %}
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-        <img class="logo" width="130" src="{{ asset('build/images/logo.jpg') }}">
-    </body>
-</html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Welcome!
+			{% endblock %}
+		</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		{{ encore_entry_link_tags('app') }}
+		{% block stylesheets %}{% endblock %}
+	</head>
+	{% if app.request.pathinfo == '/' %}
+		<body style="background: url('{{ asset('build/images/rocket-ship3-bg.svg') }}') fixed; background-size: cover">
+		{% elseif app.request.pathinfo == '/game' %}
+			<body style="background: url('{{ asset('build/images/space-bg.svg') }}') no-repeat fixed; background-size: 100vw 100vh">
+			{% elseif app.request.pathinfo == '/result' %}
+				<body style="background: url('{{ asset('build/images/space-spaceman-bg.svg') }}') fixed; background-size: 100vw 100vh">
+				{% else %}
+					<body style="background: url('{{ asset('build/images/space-bg.svg') }}') no-repeat fixed; background-size: 100vw 100vh">
+					{% endif %}
+					{% block body %}{% endblock %}
+					{% block javascripts %}
+						{{ encore_entry_script_tags('app') }}
+					{% endblock %}
+					<img class="logo" width="130" src="{{ asset('build/images/logo.png') }}">
+				</body>
+			</html>

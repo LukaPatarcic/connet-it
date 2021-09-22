@@ -1,0 +1,965 @@
+<svg
+  id="Content"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 1920 1081.8"
+>
+  <style>
+    .planet {
+      animation-name: planet-animation;
+      animation-duration: 50s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+
+    .rocketShip {
+      animation-name: rocket-animation;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    .bottomOfTurbine{
+        animation-name: rocket-animation;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    .flames {
+        animation-name: flames-animation;
+        animation-duration: 0.9s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        transform-origin: center;
+    }
+
+    .particles {
+        transform-origin: center;
+        animation-name: particles;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+    .particlesTwo {
+        transform-origin: center;
+        animation-name: particles;
+        animation-duration: 4.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+    .yellowSmoke {
+        transform-origin: bottom center;
+        animation-name: particles;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+    .orangeSmoke {
+        animation-name: particles;
+        animation-duration: 12s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+    #Satelite{
+        position: absolute;
+        z-index: 5;
+        bottom: 0px;
+        right: 5px;
+        animation-name: satelite-movement;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes satelite-movement{
+        0%{
+            transform: translate(-100px, -100px)
+        }
+        100%{
+            transform: translate(1000px, 1000px)
+        }
+    }
+
+
+    @keyframes particles {
+        0%{ transform: translate(0,0) }
+        50%{ transform: translate(5px , 25px)}
+        100%{ transform: translate(0,0)}
+    }
+
+
+    @keyframes flames-animation {
+        0% {
+            transform: translateY(0px) scaleY(1);
+        }
+        50% {
+        transform:translateY(-15px) scaleY(1.2);
+
+        }
+        100% {
+            transform: translateY(0px) scaleY(1);
+        }
+    }
+
+    @keyframes planet-animation {
+      0% {
+        transform: translate(0px, 0px);
+      }
+      25% {
+        transform: translate(5px, 25px);
+      }
+      50% {
+        transform: translate(15px, 50px);
+      }
+      75% {
+        transform: translate(5px, 25px);
+      }
+      100% {
+        transform: translate(0px, 0px);
+      }
+    }
+
+    @keyframes rocket-animation {
+        0% {
+            transform: translate(0px, 0px);
+          }
+
+          50% {
+            transform: translate(0px, 20px);
+          }
+
+          100% {
+            transform: translate(0px, 0px);
+          }
+  </style>
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #020202;
+        filter: url(#luminosity-noclip);
+      }
+      .cls-2 {
+        fill: #fff6c7;
+      }
+      .cls-3 {
+        fill: #091318;
+      }
+      .cls-4 {
+        fill: #f9a343;
+      }
+      .cls-5 {
+        fill: url(#linear-gradient);
+      }
+      .cls-6 {
+        fill: url(#linear-gradient-2);
+      }
+      .cls-7 {
+        fill: url(#linear-gradient-3);
+      }
+      .cls-8 {
+        fill: url(#linear-gradient-4);
+      }
+      .cls-9 {
+        fill: url(#linear-gradient-5);
+      }
+      .cls-10 {
+        fill: url(#linear-gradient-6);
+      }
+      .cls-11 {
+        fill: url(#linear-gradient-7);
+      }
+      .cls-12 {
+        fill: #324d51;
+      }
+      .cls-13,
+      .cls-14,
+      .cls-18 {
+        fill: none;
+        stroke: #324d51;
+        stroke-miterlimit: 10;
+      }
+      .cls-13,
+      .cls-14 {
+        stroke-linecap: round;
+      }
+      .cls-13 {
+        stroke-width: 5px;
+      }
+      .cls-14 {
+        stroke-width: 3px;
+      }
+      .cls-15 {
+        fill: #578476;
+      }
+      .cls-16 {
+        fill: #47665a;
+      }
+      .cls-17,
+      .cls-20 {
+        fill: #fff;
+      }
+      .cls-18 {
+        stroke-width: 7px;
+      }
+      .cls-19 {
+        fill: #f05123;
+      }
+      .cls-20 {
+        opacity: 0.66;
+      }
+      .cls-21,
+      .cls-23 {
+        opacity: 0.41;
+      }
+      .cls-21 {
+        fill: url(#linear-gradient-8);
+      }
+      .cls-22 {
+        mask: url(#mask);
+      }
+      .cls-24 {
+        fill: #fff6c8;
+      }
+      .cls-25 {
+        opacity: 0.21;
+      }
+      .cls-26 {
+        fill: #fdfdfe;
+      }
+    </style>
+    <linearGradient
+      id="linear-gradient"
+      x1="1711.3"
+      y1="602"
+      x2="1702.79"
+      y2="671.3"
+      gradientTransform="matrix(1, 0.05, -0.05, 1, 26.61, -76.61)"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0" stop-color="#fff6c8" stop-opacity="0.3" />
+      <stop offset="0.04" stop-color="#fff6c8" stop-opacity="0.28" />
+      <stop offset="0.3" stop-color="#fff6c8" stop-opacity="0.16" />
+      <stop offset="0.55" stop-color="#fff6c8" stop-opacity="0.07" />
+      <stop offset="0.78" stop-color="#fff6c8" stop-opacity="0.02" />
+      <stop offset="1" stop-color="#fff6c8" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient
+      id="linear-gradient-2"
+      x1="920.36"
+      y1="837.31"
+      x2="905.09"
+      y2="923.21"
+      gradientTransform="matrix(1, 0, 0, 1, 0, 0)"
+      xlink:href="#linear-gradient"
+    />
+    <linearGradient
+      id="linear-gradient-3"
+      x1="701.03"
+      y1="475.73"
+      x2="701.03"
+      y2="475.73"
+      gradientTransform="matrix(1, 0, 0, 1, 0, 0)"
+      xlink:href="#linear-gradient"
+    />
+    <linearGradient
+      id="linear-gradient-4"
+      x1="650.7"
+      y1="479.82"
+      x2="650.7"
+      y2="479.82"
+      gradientTransform="matrix(1, 0, 0, 1, 0, 0)"
+      xlink:href="#linear-gradient"
+    />
+    <linearGradient
+      id="linear-gradient-5"
+      x1="1543.39"
+      y1="962.6"
+      x2="1531.63"
+      y2="1028.73"
+      gradientTransform="matrix(1, 0, 0, 1, 0, 0)"
+      xlink:href="#linear-gradient"
+    />
+    <linearGradient
+      id="linear-gradient-6"
+      x1="241.22"
+      y1="1019.48"
+      x2="241.22"
+      y2="1019.48"
+      gradientTransform="matrix(1, 0, 0, 1, 0, 0)"
+      xlink:href="#linear-gradient"
+    />
+    <linearGradient
+      id="linear-gradient-7"
+      x1="1631.63"
+      y1="183.39"
+      x2="1620.06"
+      y2="248.47"
+      gradientTransform="matrix(1, 0, 0, 1, 0, 0)"
+      xlink:href="#linear-gradient"
+    />
+    <linearGradient
+      id="linear-gradient-8"
+      x1="295.77"
+      y1="51.65"
+      x2="276.54"
+      y2="159.8"
+      gradientTransform="translate(45.25 -32.27) rotate(7.91)"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0" stop-color="#fff" stop-opacity="0.9" />
+      <stop offset="0.01" stop-color="#fffffe" stop-opacity="0.89" />
+      <stop offset="0.38" stop-color="#fffbe7" stop-opacity="0.51" />
+      <stop offset="0.68" stop-color="#fff8d6" stop-opacity="0.24" />
+      <stop offset="0.89" stop-color="#fff7cc" stop-opacity="0.07" />
+      <stop offset="1" stop-color="#fff6c8" stop-opacity="0" />
+    </linearGradient>
+    <filter
+      id="luminosity-noclip"
+      x="227.74"
+      y="56.79"
+      width="172.76"
+      height="73.23"
+      filterUnits="userSpaceOnUse"
+      color-interpolation-filters="sRGB"
+    >
+      <feFlood flood-color="#fff" result="bg" />
+      <feBlend in="SourceGraphic" in2="bg" />
+    </filter>
+    <mask
+      id="mask"
+      x="227.74"
+      y="56.79"
+      width="172.76"
+      height="73.23"
+      maskUnits="userSpaceOnUse"
+    >
+      <path
+        class="cls-1"
+        d="M368.93,115.29A54.91,54.91,0,0,0,260.28,101C295.56,111,332.61,112.56,368.93,115.29Z"
+      />
+    </mask>
+    <symbol id="stars" data-name="stars" viewBox="0 0 8.58 7.63">
+      <ellipse class="cls-2" cx="4.29" cy="3.81" rx="4.29" ry="3.81" />
+    </symbol>
+    <symbol id="sparkle" data-name="sparkle" viewBox="0 0 10.83 10.83">
+      <path
+        class="cls-2"
+        d="M10.18,4.76H6.07V.66a.66.66,0,1,0-1.31,0v4.1H.66a.66.66,0,1,0,0,1.31h4.1v4.11a.66.66,0,0,0,1.31,0V6.07h4.11a.66.66,0,0,0,0-1.31Z"
+      />
+    </symbol>
+  </defs>
+  <rect class="cls-3" width="1920" height="1080" />
+  <g id="Smoke">
+    <path
+      id="Yellow"
+      class="cls-2 yellowSmoke"
+      d="M821.78,1081.8H0a68.4,68.4,0,0,1,20-23.17,38.84,38.84,0,0,1,36.51-52h.5a45.73,45.73,0,0,1,66-34,91.54,91.54,0,0,1,123.37-49.06A58.51,58.51,0,0,1,295,889.82a31.46,31.46,0,0,1,21.34-17.37,32.29,32.29,0,0,1,35.88-52.24,39,39,0,0,1,7.45-5,23.5,23.5,0,0,1,22.91-18.3,23.91,23.91,0,0,1,4.66.46,17.87,17.87,0,0,1,33.49,6.08,30,30,0,0,1,20.13,14.28,48.68,48.68,0,0,1,34.25,17.92,25,25,0,0,1,16,18.87,49.52,49.52,0,0,1,58.95,43.4,49.31,49.31,0,0,1,34.48,47c0,.75,0,1.49-.06,2.22a36.65,36.65,0,0,1,24,34.42,37.42,37.42,0,0,1-.46,5.84,62.57,62.57,0,0,1,89,56.73c0,.45,0,.89,0,1.33l.78,0a30.74,30.74,0,0,1,30.73,30.1,23.42,23.42,0,0,1,42.41,2.65,92.46,92.46,0,0,1,50.87,3.62Z"
+    />
+    <path
+      id="Orange"
+      class="cls-4 orangeSmoke"
+      d="M606.57,1081.8H149.28a37,37,0,0,1,51.84-24.4,22,22,0,0,1,22.29-1.07,47,47,0,0,1,70.33-1.37,47.5,47.5,0,0,1,77.49-12.24,34,34,0,0,1,57-7.72,56.5,56.5,0,0,1,101.91,17.84,32.93,32.93,0,0,1,49.67,14.65,20.46,20.46,0,0,1,26.73,14.31Z"
+    />
+    <rect
+      class="cls-2 bottomOfTurbine"
+      x="360.98"
+      y="627.24"
+      width="81.75"
+      height="237.99"
+    />
+  </g>
+  <g id="Particles">
+    <g id="Particle_3" data-name="Particle 3" class="particles">
+      <circle class="cls-2" cx="303.79" cy="774.29" r="7.33" />
+      <circle class="cls-2" cx="333.22" cy="781.07" r="2.84" />
+      <circle class="cls-2" cx="336.26" cy="746.04" r="5.47" />
+    </g>
+    <g id="Particle_4" data-name="Particle 4" class="particles">
+      <ellipse class="cls-2" cx="314.13" cy="743.62" rx="4.33" ry="3.33" />
+      <circle class="cls-2" cx="333.72" cy="687.24" r="3.33" />
+      <circle class="cls-2" cx="346.21" cy="714.38" r="4.48" />
+    </g>
+    <g id="Particle_1" data-name="Particle 1" class="particlesTwo">
+      <ellipse class="cls-2" cx="500.13" cy="787.29" rx="3.67" ry="3" />
+      <circle class="cls-2" cx="498.46" cy="752.29" r="5.33" />
+      <circle class="cls-2" cx="467.73" cy="735.24" r="5.33" />
+      <circle class="cls-2" cx="533.59" cy="809.16" r="1.79" />
+    </g>
+    <g id="Particle_2" data-name="Particle 2" class="particlesTwo">
+      <circle class="cls-2" cx="484.83" cy="716.58" r="2.3" />
+      <circle class="cls-2" cx="477.36" cy="812.54" r="5.17" />
+      <use
+        width="8.58"
+        height="7.63"
+        transform="translate(463.44 686.75)"
+        xlink:href="#stars"
+      />
+    </g>
+  </g>
+  <path class="cls-2" d="M537.13,774.29h0Z" />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(39.02 659.51)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(197.58 709.69)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(275.03 462.98)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(1308.58 1004.5)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(987.17 694.97)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(245.5 911.13)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(751.62 174.9)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(1043.58 72.71)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(1421.75 275.53)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(1009.35 952.21)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(1295.64 873.63)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(1552.12 917.53)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(1712.59 688.46)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(1734.91 309.5)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(1804.99 432.16)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(1806.73 830.96)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(1630.08 337.86)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(1555.96 142.76)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(1692.66 144.8)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(1333.5 164.88)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(1023.83 495.86)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(1512.16 716.48)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(1066.82 271.72)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(690.94 102.25)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(275.03 284.69)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(581.01 571.48)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(332.51 856.61)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(1062.44 574.17)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(53.36 195.07)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(743.62 285.73)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(478.24 591.57)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(281.23 825.6)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(182.32 927.21)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(373.61 545.33)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(510.69 918.62)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(492.34 1043.28)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(597.1 323.4)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(790.71 652.37)"
+    xlink:href="#stars"
+  />
+  <use
+    width="8.58"
+    height="7.63"
+    transform="translate(1177.57 1004.34)"
+    xlink:href="#stars"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(157.32 717.63)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(475.58 81.6)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(977.59 124.61)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(1414.24 211.05)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(1610.71 297.29)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(1791.36 205.25)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(1789.11 82.25)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(1462.51 90.05)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(141.94 112.31)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(83.03 317.84)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(59.26 61.99)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(1541.06 475.24)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(554.24 427.99)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(527.75 251.5)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(576.35 154.31)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(218.01 652.67)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(990.02 365.93)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(1660.93 436.1)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(1135.92 104.09)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(1170.08 193.53)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(151.9 539.92)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(1002.4 726.8)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(128.52 965.29)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(1063.04 742.42)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(1742.7 946.79)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(1534.19 560.61)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(1839.36 532.2)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(810.13 305.54)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(711.19 559.03)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(754.1 700.82)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(602.51 852.56)"
+    xlink:href="#sparkle"
+  />
+  <use
+    width="10.83"
+    height="10.83"
+    transform="translate(840.24 443.02)"
+    xlink:href="#sparkle"
+  />
+  <path
+    class="cls-5"
+    d="M1884.15,699.87c1.22-22.58-19.23-42-45.67-43.47-15.68-.84-29.94,4.85-39.21,14.32-13.68-5-31.15-8.48-50.32-9.51h-.29c-2.89-27.75-55.35-52.38-120.88-55.91-68.38-3.68-125.09,17-126.66,46.22"
+  />
+  <path
+    class="cls-6"
+    d="M1030.52,884.55a33,33,0,0,0-65.5-5.68,27,27,0,0,0-29.87-4.82,44.77,44.77,0,0,0-89.13,0,35.15,35.15,0,0,0-55.31,28.8"
+  />
+  <path class="cls-7" d="M701,475.73" />
+  <path class="cls-8" d="M650.7,479.82" />
+  <path
+    class="cls-9"
+    d="M1622.74,1018.82c0-9.86-10.85-17.85-24.23-17.85a32,32,0,0,0-4.75.35c0-.12,0-.23,0-.35,0-19.71-17.49-35.68-39.07-35.68-16.79,0-31.11,9.68-36.63,23.26a40.49,40.49,0,0,0-72.43,24.9"
+  />
+  <path class="cls-10" d="M241.22,1019.48" />
+  <path
+    class="cls-11"
+    d="M1773.3,242.3c0-12.81-13.34-23.19-29.81-23.19a38,38,0,0,0-8.85,1c-2.41-14.1-20.82-25.08-43.18-25.08-15.29,0-28.72,5.13-36.47,12.88a155.09,155.09,0,0,0-29.14-2.69c-20.66,0-39.42,3.83-53.36,10.08a49.82,49.82,0,0,0-99.14,7"
+  />
+  <g id="RocketShip" class="rocketShip">
+    <path
+      class="cls-12"
+      d="M437.41,526.24s67.72,3.56,67.38,34.67,0,83.21,12,98.14-8,20.27-8,20.27l-55-94.41-31.5-19S426.46,524.11,437.41,526.24Z"
+    />
+    <path
+      class="cls-12"
+      d="M364.84,526.24s-67.71,3.56-67.38,34.67,0,83.21-12,98.14,8,20.27,8,20.27l55-94.41,31.5-19S375.8,524.11,364.84,526.24Z"
+    />
+    <line class="cls-13" x1="401.86" y1="272.46" x2="401.86" y2="268.63" />
+    <line class="cls-14" x1="401.86" y1="329.97" x2="401.86" y2="272.46" />
+    <path
+      class="cls-15"
+      d="M439.44,616.24c66.12-90.64,55.77-208.7-37.58-288-94.65,79.3-105.15,197.36-38.11,288Z"
+    />
+    <path
+      class="cls-16"
+      d="M401.86,328.24h0c-94.65,79.3-105.14,197.36-38.11,288h38.12Z"
+    />
+    <path
+      class="cls-12"
+      d="M437.41,365.21c-2.5-3.21-5.09-6.39-7.8-9.52a114.87,114.87,0,0,1-55.84-.09c-2.74,3.13-5.36,6.3-7.89,9.51a153.67,153.67,0,0,0,71.53.1Z"
+    />
+    <path
+      class="cls-12"
+      d="M464.49,572.7a214.49,214.49,0,0,0,7.82-20.89c-20.76,1.72-44.81,2.71-70.45,2.71-26.07,0-50.49-1-71.48-2.8a213.18,213.18,0,0,0,7.93,20.91c19.52,1.59,41,2.46,63.55,2.46C424.06,575.09,445.22,574.24,464.49,572.7Z"
+    />
+    <path
+      class="cls-12"
+      d="M401.86,457a25.86,25.86,0,1,1,25.42-25.86A25.67,25.67,0,0,1,401.86,457Z"
+    />
+    <path
+      class="cls-17"
+      d="M401.86,408.24a22.86,22.86,0,1,1-22.43,22.85,22.66,22.66,0,0,1,22.43-22.85m0-6a28.86,28.86,0,1,0,28.42,28.85,28.64,28.64,0,0,0-28.42-28.85Z"
+    />
+    <line class="cls-18" x1="386.79" y1="489.24" x2="416.79" y2="489.24" />
+    <line class="cls-18" x1="386.92" y1="500.9" x2="416.79" y2="500.9" />
+    <g id="Flames" class="flames">
+      <path
+        class="cls-19"
+        d="M363.74,616.24c-35.22,30.76,7.55,34.93,49.05,162,0,0-4.89-40.2,18-85.74,24-47.74,16.79-53.44,8.65-76.26Z"
+      />
+      <path
+        class="cls-4"
+        d="M363.74,616.24c-19.42,46.26,49.05,54.62,46.05,96,0,0-1.7-77,29.65-96Z"
+      />
+    </g>
+    <path
+      class="cls-12"
+      d="M415.24,538.4c0,6.72-13.94,133.5-13.94,133.5s-13.93-126.78-13.93-133.5,6.24-12.16,13.93-12.16S415.24,531.68,415.24,538.4Z"
+    />
+    <ellipse class="cls-20" cx="408.29" cy="424.11" rx="4.25" ry="3.87" />
+  </g>
+  <g id="Planet" class="planet">
+    <circle class="cls-21" cx="314.13" cy="111.84" r="54.92" />
+    <circle class="cls-21" cx="314.13" cy="111.84" r="54.92" />
+    <g class="cls-22">
+      <g class="cls-23">
+        <path class="cls-24" d="M313.07,97.79l1,.13Z" />
+        <path class="cls-24" d="M318,98.46l1,.15Z" />
+        <path
+          class="cls-24"
+          d="M319.74,98.72c35.46,5.18,63.11,12.91,62.46,17.57-.67,4.82-31.38,4.54-68.6-.64s-66.85-13.27-66.18-18.1c.65-4.66,29.36-4.55,64.88.13-46-6.08-83.51-5.19-84.53,2.16-1.05,7.54,36.76,19,84.46,25.66s87.21,5.89,88.26-1.65C401.51,116.5,365.67,105.42,319.74,98.72Z"
+        />
+        <path class="cls-24" d="M319,98.61l.76.11Z" />
+        <path class="cls-24" d="M312.3,97.68l.77.11Z" />
+        <path class="cls-24" d="M316,98.19l2,.27Z" />
+        <path class="cls-24" d="M314.07,97.92l1.95.27Z" />
+      </g>
+    </g>
+  </g>
+  <g id="Satelite" class="cls-25">
+    <path class="cls-16" d="M877.26,113.46a18,18,0,0,1,32.94-14.3Z" />
+    <path class="cls-26" d="M910.2,99.16a249.55,249.55,0,0,1-32.94,14.3Z" />
+    <path
+      class="cls-16"
+      d="M897.48,116.17l-7.77-17.89a.49.49,0,0,1,.25-.65.5.5,0,0,1,.65.25l7.77,17.9a.5.5,0,0,1-.26.65A.49.49,0,0,1,897.48,116.17Z"
+    />
+    <path
+      class="cls-16"
+      d="M888.87,98.64l-7.77-17.9a1.4,1.4,0,0,1,2.57-1.11l7.77,17.89a1.4,1.4,0,0,1-2.57,1.12Z"
+    />
+    <rect
+      class="cls-16"
+      x="856.28"
+      y="55.43"
+      width="39.6"
+      height="20.45"
+      transform="translate(587.4 -764.1) rotate(66.53)"
+    />
+    <rect
+      class="cls-16"
+      x="842.42"
+      y="64.6"
+      width="67.31"
+      height="2.1"
+      transform="translate(46.33 354.33) rotate(-23.47)"
+    />
+    <rect
+      class="cls-16"
+      x="907.49"
+      y="25.49"
+      width="13.23"
+      height="47.3"
+      transform="translate(595.14 -808.92) rotate(66.53)"
+    />
+    <rect
+      class="cls-16"
+      x="831.3"
+      y="58.57"
+      width="13.23"
+      height="47.3"
+      transform="translate(579.64 -719.13) rotate(66.53)"
+    />
+  </g>
+</svg>
